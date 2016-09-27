@@ -1,3 +1,7 @@
+licenses(["notice"])
+
+package(default_visibility = ["//visibility:public"])
+
 cc_library(
     name = "cjk_tokenizer",
     hdrs = glob(["*.h"],),
