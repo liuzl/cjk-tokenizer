@@ -13,3 +13,9 @@ cc_binary(
     srcs = ["test.cc",],
     deps = [":cjk_tokenizer",],
 )
+
+cc_binary(
+    name = "cjkexample",
+    srcs = ["cjk_tokenizer_example.cc",],
+    deps = [":cjk_tokenizer",],
+)

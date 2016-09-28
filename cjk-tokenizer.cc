@@ -142,7 +142,7 @@ void tokenizer::tokenize(const string &str,
         unsigned char *p
           = (unsigned char*) temp_token_list[j].c_str();
         if (*p == ' ' || UTF8_IS_CJK(temp_uchar_list[j])) {
-          ++j;
+          if (*p == ' ') ++j; // zliu 2016.9.28, fix bug
           break;
         }
         token_str += temp_token_list[j];
